@@ -1,0 +1,30 @@
+#!/bin/bash
+set -u
+set -o pipefail
+
+################################################################################
+# Reproducer script.
+#
+# Without printer options, shfmt reads .editorconfig
+################################################################################
+
+. scripts/functions.sh
+
+info One filepath with printer options is OK.
+run shfmt -d -i 4 scripts/1
+run shfmt -d -i 4 scripts/2
+run shfmt -l -i 4 scripts/2
+
+info One filepath without printer options is OK.
+run shfmt -d scripts/1
+run shfmt -d scripts/2
+run shfmt -l scripts/2
+
+info Two filepaths with printer options is OK.
+run shfmt -d -i 4 scripts/1 scripts/2
+run shfmt -d -ci scripts/1 scripts/2
+run shfmt -l -ci scripts/1 scripts/2
+
+info Two filepaths WITHOUT printer options is PANIC.
+run shfmt -d scripts/1 scripts/2
+run shfmt -l scripts/1 scripts/2
