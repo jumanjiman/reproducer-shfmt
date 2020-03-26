@@ -2,8 +2,30 @@
 
 This is a reproducer for `shfmt` panic.
 
+## Observed platforms
+
+shfmt version: 3.0.2
+
+The issue appears on:
+
+- Mac (`shfmt` from Brew)
+- Alpine (`shfmt` from `apk add`)
+
+## Reproduce with Docker
+
+To run the reproducer on Alpine with Docker:
+
+```bash
+docker build --rm -t repro .
+docker run --rm -it repro
+```
+
+## Results
+
 ```
 $ ./test
+[RUN] shfmt -version
+v3.0.2
 
 [INFO] One filepath with printer options is OK.
 [RUN] shfmt -d -i 4 scripts/1

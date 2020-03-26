@@ -10,6 +10,8 @@ set -o pipefail
 
 . scripts/functions.sh
 
+run shfmt -version
+
 info One filepath with printer options is OK.
 run shfmt -d -i 4 scripts/1
 run shfmt -d -i 4 scripts/2
