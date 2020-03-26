@@ -1,6 +1,6 @@
 # Reproducer
 
-This is a reproducer for `shfmt` panic.
+This is a reproducer for `shfmt` issue https://github.com/mvdan/sh/issues/530.
 
 ## Observed platforms
 
@@ -19,6 +19,10 @@ To run the reproducer on Alpine with Docker:
 docker build --rm -t repro .
 docker run --rm -it repro
 ```
+
+## Workaround
+
+:bulb: Remove `keep_padding` from `.editorconfig`.
 
 ## Results
 
