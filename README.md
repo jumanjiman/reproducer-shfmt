@@ -2,6 +2,8 @@
 
 This is a reproducer for `shfmt` issue https://github.com/mvdan/sh/issues/530.
 
+:white_check_mark: Resolved and will ship in subsequent release.
+
 ## Observed platforms
 
 shfmt version: 3.0.2
