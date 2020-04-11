@@ -2,7 +2,8 @@
 
 This is a reproducer for `shfmt` issue https://github.com/mvdan/sh/issues/530.
 
-:white_check_mark: Resolved and will ship in subsequent release.
+:white_check_mark: Resolved and shipped with
+[v3.1.0](https://github.com/mvdan/sh/releases/tag/v3.1.0).
 
 ## Observed platforms
 
